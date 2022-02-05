@@ -1,7 +1,7 @@
 Repsitory for personal website. 
 
-## Hardware
-- Hardware: Apple Macbook Air (M1, 2020)
+## System (Local
+- Machine: Apple Macbook Air (M1, 2020)
 - OS: macOS Monterey Version 12.2
 
 ## Setup Procedure
@@ -99,8 +99,8 @@ Repsitory for personal website.
 
         >bundler: failed to load command: jekyll (/opt/homebrew/lib/ruby/gems/3.0.0/bin/jekyll)
 
-    - Found solution in a stack overflow [page](https://stackoverflow.com/questions/69890412/bundler-failed-to-load-command-jekyll) which points to a GitHub [issue](https://github.com/github/pages-gem/issues/752#issuecomment-764647862). It turned out [Ruby 3.0 no longer commes with a gem called webrick](https://github.com/jekyll/jekyll/issues/8523). So, the solution is to add `gem "werbrick"` into `_config.yml` or to run `bundle add wabrick` in the command line. 
+    - Found solution in a stack overflow [page](https://stackoverflow.com/questions/69890412/bundler-failed-to-load-command-jekyll) which points to a GitHub [issue](https://github.com/github/pages-gem/issues/752#issuecomment-764647862). It turned out [Ruby 3.0 no longer commes with a gem called webrick](https://github.com/jekyll/jekyll/issues/8523). So, the solution is to add `gem "werbrick"` into `_config.yml` or to run `bundle add wabrick` in the command line
     - Tried `bundle exec jekyll serve` once again and the command was successful hosting the website locally
-    - Based on the [GitHub Docs](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll/#building-your-site-locally), open the browser and navigate to `http://localhost:4000`.
+    - Based on the [GitHub Docs](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll/#building-your-site-locally), open the browser and navigate to `http://localhost:4000`
     - Successfully test the site locally with Jekyll :tada:
 
