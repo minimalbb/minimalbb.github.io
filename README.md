@@ -1,6 +1,6 @@
 Repsitory for personal website. 
 
-## System (Local
+## Local System
 - Machine: Apple Macbook Air (M1, 2020)
 - OS: macOS Monterey Version 12.2
 
