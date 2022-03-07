@@ -2,7 +2,7 @@
 title: "Markdown Formatting with HTML"
 date: 2022-02-26T18:47:00-06:00
 categories:
-  - blog
+  - cheat sheet
 tags:
   - Markdown
   - HTML

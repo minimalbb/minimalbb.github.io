@@ -2,7 +2,7 @@
 title: "Markdown Guide"
 date: 2022-02-04T21:19:00-06:00
 categories:
-  - blog
+  - cheat sheet
 tags:
   - Markdown
 toc_sticky: true

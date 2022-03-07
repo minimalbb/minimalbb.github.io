@@ -2,7 +2,7 @@
 title: "Kramdown Markdown Guide with Jekyll"
 date: 2022-02-12T14:58:00-06:00
 categories:
-  - blog
+  - cheat sheet
 tags:
   - Markdown
   - Kramdown
@@ -275,3 +275,53 @@ Right aligned text.
 
 Justified text. Justified text. Justified text. Justified text. Justified text. Justified text. Justified text. Justified text. Justified text.
 {: .text-justify}
+
+## Code Block with Line Numbers
+
+The code block that comes with typical Markdown processor does not have the capability to add line number for ease of referencing. There are two options to show line numbers on the side of code blocks.
+
+1. Switch the beginning triple tilde signs into `{{ "{% highlight someLanguage linenos " }}%}` and the ending triple tilde signs into `{{ "{% endhighlight" }}%}`, respectively. The `linenos` is what make the line numbers show up. Most markdown previewer won't work by this approach since this feature is Jekyll/liquid specific. You can only see the syntax highlighting and line number if you build the site through Jekyll.
+2. You can also tune the kramdown options to show line numbers site wide. In your `_config.yml` file, specify the following options.
+
+```yml
+markdown: kramdown
+kramdown:
+    highlighter: rouge
+    syntax_highlighter_opts:
+        block:
+            line_numbers: true
+```
+
+I have already add the above options in the `config.yml` file, so any code block will have line numbers attached through out my site.
+
+~~~md
+```py
+def findNumbers(self, nums: List[int]) -> int:
+  counter = 0
+  for num in nums:
+      num_div = 0
+      temp = num
+      while temp >= 10:
+          temp = temp / 10
+          num_div += 1
+      if num_div % 2 == 1:
+          counter += 1
+  return counter
+```
+~~~
+
+A code block enclosing by Jekyll/liquid tags will just looks the same:
+
+{% highlight py linenos%}
+def findNumbers(self, nums: List[int]) -> int:
+  counter = 0
+  for num in nums:
+      num_div = 0
+      temp = num
+      while temp >= 10:
+          temp = temp / 10
+          num_div += 1
+      if num_div % 2 == 1:
+          counter += 1
+  return counter
+{% endhighlight %}
